@@ -45,3 +45,17 @@ pose_sensor/pose_fixed_q_wv: true
 pose_sensor/pose_absolute_measurements: true
 pose_sensor/pose_use_fixed_covariance: true
 pose_sensor/pose_measurement_world_sensor: true  # selects if sensor measures its position w.r.t. world (true, e.g. Vicon) or the position of the world coordinate system w.r.t. the sensor (false, e.g. ethzasl_ptam)
+# position_pose_sensor/use_stable_initialization: true
+# pose_sensor/enable_mah_outlier_rejection: true
+# pose_sensor/mah_threshold: 5.0
+# position_sensor/enable_mah_outlier_rejection: true
+# position_sensor/mah_threshold: 5.0
+# pose_sensor/enable_noise_estimation: true
+# position_sensor/enable_noise_estimation: true
+pose_sensor/use_reset_to_pose: true
+pose_sensor/use_transform_recovery: true
+  #these are the paramse corresponding to the recovery noise
+pose_sensor/transform_recovery_noise_p: 0.002
+pose_sensor/transform_recovery_noise_q: 0.025
+#these are the number of annealing steps, i.e. while this number of measurements the transform noise will decrease linearly to reach its original level
+pose_sensor/transform_anealing_steps: 200
